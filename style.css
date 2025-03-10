@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main_div{
+    height: fit-content;
+    width: 370px;
+    padding: 15px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+#score_board div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+#score_board div span{
+   font-size: 50px;
+   margin-left: 5px;
+}
+#score_board{
+    height: 90px;
+    width: 350px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#score_board img{
+    height: 60px;
+    margin-right: 10px;
+}
+#turn{
+    height: 30px;
+    background-color: white;
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+#turn img{
+    height: 25px;
+}
+#background{
+    height: 320px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#game_board{
+    height: 280px;
+    width: 280px;
+    border-radius: 10px;
+    background-color: coral;
+    background-image: url(board.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.place{
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.place img{
+    height: 60px;
+}
+#video{
+    height: 100%;
+}
+.button{
+    height: 40px;
+    width: 110px;
+    border-radius: 100px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.881);
+    font-size: 20px;
+    margin-top: 30px;
+}
+.button:hover{
+    background-color: rgb(73, 210, 73);
+    border: 1.5px white solid;
+}
+h2{
+    font-weight: 600;
+    margin-top: 20px;
+}
