@@ -74,7 +74,7 @@ body{
     width: 280px;
     border-radius: 10px;
     background-color: coral;
-    background-image: url(board.png);
+    background-image: url(images/board.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -17,7 +17,7 @@ function start_game(){
     
   
     let random =[Math.round(Math.random())];
-    turn.innerHTML=random===0?`<img src="letter-o.png" alt="">'s turn`:`<img src="close.png" alt="">'s turn`
+    turn.innerHTML=random===0?`<img src="images/letter-o.png" alt="">'s turn`:`<img src="images/close.png" alt="">'s turn`
     let turn_image = document.querySelector("#turn img");
     instruction(random[random.length-1],turn_image);
     
@@ -49,13 +49,13 @@ function main_function(e, counter, random,turn_image,place,arr) {
 
     arr[Math.floor(index / 3)][index % 3] = random[random.length-1];
 
-    image[index].src = random[random.length-1] === 0 ? `letter-o.png` : `close.png`;
+    image[index].src = random[random.length-1] === 0 ? `images/letter-o.png` : `images/close.png`;
 
     if (check_win(arr,random[random.length-1])) {
         let turn = document.querySelector("#turn");
         turn.innerText = `Player ${random[random.length-1] === 0 ? "O" : "X"} Wins!`;
 
-        let audio = new Audio("victory.mp3");
+        let audio = new Audio("sounds/victory.mp3");
         audio.play();
 
         place.forEach(el => el.removeEventListener('click', main_function));
@@ -68,7 +68,7 @@ function main_function(e, counter, random,turn_image,place,arr) {
         let turn = document.querySelector("#turn");
         turn.innerText = "It's a draw";
 
-        let audio = new Audio("draw.mp3");
+        let audio = new Audio("sounds/draw.mp3");
         audio.play();
         setTimeout(start_game,1500)
     } 
@@ -104,7 +104,7 @@ function check_win(arr,random) {
 
 function next_page(random){
     let game_board=document.querySelector("#game_board");
-    game_board.innerHTML=random===0?` <video src="o.mp4" id="video" autoplay loop disablePictureInPicture muted></video>`:` <video src="x.mp4" id="video" autoplay loop disablePictureInPicture muted></video>`;
+    game_board.innerHTML=random===0?` <video src="gifs/o.mp4" id="video" autoplay loop disablePictureInPicture muted></video>`:` <video src="gifs/x.mp4" id="video" autoplay loop disablePictureInPicture muted></video>`;
     let background=document.querySelector("#background");
     let button=document.createElement("button");
     background.after(button);
@@ -124,5 +124,5 @@ function display_score(){
 }
 
 function instruction(random,turn_image) {
-    turn_image.src = random === 0 ? `letter-o.png` : `close.png`;
+    turn_image.src = random === 0 ? `images/letter-o.png` : `images/close.png`;
 }
